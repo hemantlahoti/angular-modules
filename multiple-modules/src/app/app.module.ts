@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { SecondmoduleModule} from './secondmodule/secondmodule.module';
 import { WelcomepageComponent } from './welcomepage/welcomepage.component';
 import { LoginModule } from 'login-multiple-module';
+import { ServicesModule } from './services/services.module';
 
 @NgModule({
   declarations: [
@@ -16,9 +17,9 @@ import { LoginModule } from 'login-multiple-module';
     BrowserModule,
     AppRoutingModule,
     SecondmoduleModule,
-    LoginModule
+    LoginModule,
+    ServicesModule.forRoot()
   ],
-  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

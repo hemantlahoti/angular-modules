@@ -5,6 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { SecondmoduleModule} from './secondmodule/secondmodule.module';
 import { WelcomepageComponent } from './welcomepage/welcomepage.component';
+import { LoginModule } from 'login-multiple-module';
 
 @NgModule({
   declarations: [
@@ -15,6 +16,7 @@ import { WelcomepageComponent } from './welcomepage/welcomepage.component';
     BrowserModule,
     AppRoutingModule,
     SecondmoduleModule,
+    LoginModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { LoginService } from 'login-multiple-module';
 
 @Component({
   selector: 'app-welcomepage',
@@ -6,10 +7,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./welcomepage.component.scss']
 })
 export class WelcomepageComponent implements OnInit {
-
-  constructor() { }
+  loginService: LoginService;
+  constructor(loginService: LoginService) {
+    this.loginService =  loginService;
+   }
 
   ngOnInit(): void {
+    this.loginService.SetUsername('Hemant');
+    this.loginService.SetPassword('Lahoti');
   }
 
 }

@@ -3,7 +3,6 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { SecondmoduleModule} from './secondmodule/secondmodule.module';
 import { WelcomepageComponent } from './welcomepage/welcomepage.component';
 import { LoginModule } from 'login-multiple-module';
 import { ServicesModule } from './services/services.module';
@@ -16,7 +15,6 @@ import { ServicesModule } from './services/services.module';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    SecondmoduleModule,
     LoginModule,
     ServicesModule.forRoot()
   ],

@@ -4,12 +4,12 @@ import { LoginComponent } from 'login-multiple-module';
 import { WelcomepageComponent } from './welcomepage/welcomepage.component';
 
 const routes: Routes = [
-  { path: '', pathMatch: 'full', redirectTo: 'secondmodule' },
+  { path: '', pathMatch: 'full', redirectTo: 'welcome' },
   { path: 'welcome', component: WelcomepageComponent },
   { path: 'login1', component: LoginComponent },
   {
     path: 'secondmodule',
-    loadChildren: './secondmodule/secondmodule.module#SecondmoduleModule',
+    loadChildren: () => import('./secondmodule/secondmodule.module').then(m => m.SecondmoduleModule)
   }
 ];
 
